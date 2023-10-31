@@ -8,7 +8,7 @@
  * @size : the number
  * @c : the caractére to print
  *
- * Return : nothing.
+ * Return: char pointer to malloc creted memory adress or NULLif error
 */
 
 char *create_array(unsigned int size, char c)
