@@ -4,17 +4,18 @@
 
 
 /**
- * create char function - create char
- * @ unsigned int size : the number
- * @ char c : the caractére to print
+ * create_array - function create char
+ * @size : the number
+ * @c : the caractére to print
  *
- * * Return : nothing.
+ * Return : nothing.
 */
 
 char *create_array(unsigned int size, char c)
 {
 	char *vecteur;
 	unsigned int i;
+
 	if (size == 0)
 		return  (NULL);
 	vecteur = malloc(size * sizeof(char));
