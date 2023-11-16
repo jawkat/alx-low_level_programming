@@ -1,5 +1,5 @@
 ; Declare needed C functions
-extern printf
+extern printf ; déclaration de la fonction printf pour que le programme puisse l'utiliser
 
 section .data
     msg db "Hello, Holberton", 0 ; Define the string variable named msg
