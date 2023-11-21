@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_listint - function that prints 
+ * print_listint - function that prints
  * all elements of a listint_t list
  *
  * @h: pointeur to firstt element in the list(head)
