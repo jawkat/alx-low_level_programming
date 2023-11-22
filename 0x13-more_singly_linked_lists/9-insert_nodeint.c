@@ -5,15 +5,14 @@
  * position
  *
  * @head: pointer to pointer of first node of list
- * @index: index of the list where the new node
+ * @in: index of the list where the new node
  * should be added
- * @data: data to be stored in new node
+ * @dt: data to be stored in new node
  *
  * Return: address of the new node or NULL if it fails
  **/
 
-listint_t *insert_nodeint_at_index(listint_t ||
-		**head, unsigned int index, int data)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int in, int dt)
 {
 	listint_t *new_node, *temp, *prev;
 	unsigned int i;
@@ -28,15 +27,15 @@ listint_t *insert_nodeint_at_index(listint_t ||
 	temp = *head;
 	prev = NULL;
 
-	for (i = 0; i < index && temp; i++)
+	for (i = 0; i < in && temp; i++)
 	{
 		prev = temp;
 		temp = temp->next;
 	}
 
-	if (i == index)
+	if (i == in)
 	{
-		new_node->n = data;
+		new_node->n = dt;
 		new_node->next = temp;
 
 		if (prev)
