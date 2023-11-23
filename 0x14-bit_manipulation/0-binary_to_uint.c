@@ -6,19 +6,23 @@
  *
  * Return: Converted unsigned int, or 0 if an error occurs
  */
+
 unsigned int binary_to_uint(const char *b)
 {
-	int i, pu = 1, len = 0;
+	int pu = 1, len = 0;
 	unsigned int res = 0;
+
+	if (b == NULL)
+		return (0);
 
 	while (b[len])
 		len++;
 
-	for (i = len - 1; i >= 0; i--)
+	for (len--; len >= 0; len--)
 	{
-		if (b[i] == '1' || b[i] == '0')
+		if (b[len] == '1' || b[len] == '0')
 		{
-			res = res + (b[i] - '0') * pu;
+			res = res + (b[len] - '0') * pu;
 			pu = pu * 2;
 		}
 		else
