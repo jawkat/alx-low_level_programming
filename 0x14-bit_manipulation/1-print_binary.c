@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 {
 	int i, bit;
 	int flag = 0;
-	int size = sizeof(int) * 8 - 1;
+	int size = sizeof(unsigned long int) * 8 - 1;
 
 	for (i = size; i >= 0; i--)
 	{
