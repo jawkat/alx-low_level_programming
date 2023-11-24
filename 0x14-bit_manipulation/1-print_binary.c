@@ -19,7 +19,7 @@ void print_binary(unsigned long int n)
 		bit = (n >> i) & 1;
 		if (bit == 1 || flag == 1)
 		{
-			putchar(bit + '0');
+			_putchar(bit + '0');
 			flag = 1;
 		}
 	}
