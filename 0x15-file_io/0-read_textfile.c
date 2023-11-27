@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * read_textfile - reads a text file and print it to std output
+ * @filename: variable pointer
+ * @letters: size letters
+ *
+ * Return: the actual number of letters it could read and print, 0 otherwise
+ */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	size_t wri;
@@ -9,7 +17,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 		return (0);
-
 
 	texte = malloc(letters);
 
@@ -32,10 +39,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(texte);
 	}
 
-	wri = write(1, texte, lue);
+	wri = write(STDOUT_FILENO, texte, lue);
 	close(fd);
-	free (texte);
-
+	free(texte);
 	return (wri);
-
 }
