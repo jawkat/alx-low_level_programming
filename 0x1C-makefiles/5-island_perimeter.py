@@ -2,8 +2,6 @@
 """
 5-island_perimeter
 """
-from numpy import size
-
 
 def island_perimeter(grid):
     """
